@@ -5,7 +5,7 @@ language_tabs: # must be one of https://git.io/vQNgJ
   - shell
 
 toc_footers:
-  - <a href='https://dashboard.spotii.me/merchant/signup/' target='_blank'>Sign Up for a Merchant account</a>
+  - <a href='https://dashboard.spotii.me/signup' target='_blank'>Sign Up for a Merchant account</a>
 
 includes:
   # - errors
@@ -59,7 +59,7 @@ You must replace <<code>temporary-bearer-token</code>> with the returned tempora
 
 ## Workflow
 
-<a href='https://storage.googleapis.com/slate_doc/checkout-api-flow.png' target='_blank'><img src="https://storage.googleapis.com/slate_doc/checkout-api-flow.png" /></a>
+<a href='/images/checkout-api-flow.png' target='_blank'><img src="/images/checkout-api-flow.png" /></a>
 
 ## Create a Checkout
 
@@ -290,14 +290,14 @@ This extension allows you to use Spotii as a payment gateway in your Magento 2 s
 5. `php bin/magento cache:clean`
 
 #### Manual
-1. Login to your Spotii merchant account. Sign up <a href='https://dashboard.spotii.me/merchant/signup/' target='_blank'>here</a> if you don’t have an account.
+1. Login to your Spotii merchant account. Sign up <a href='https://dashboard.spotii.me/signup' target='_blank'>here</a> if you don’t have an account.
 2. Navigate to settings > integrations to reference your API Keys.
 3. Open a command line interface.
 4. In your Magento 2 `[ROOT]/app/code/` directory, create a new folder name `Spotii`.
 5. Change directory to the `Spotii` folder.
 6. Create a new folder name `Spotiipay`.
 7. Change directory into the `Spotiipay` folder.
-8. Extract the files from this <a href='#' target='_blank'>repository</a>.
+8. Extract the files from this <a href='https://github.com/spotii-me/magento2' target='_blank'>repository</a>.
 9. Run the below command to enable Spotii:
 `php bin/magento module:enable Spotii_Spotiipay`
 10. Run the Magento setup upgrade:
@@ -313,11 +313,12 @@ This extension allows you to use Spotii as a payment gateway in your Magento 2 s
 ### 2a. Admin Configuration
 1. Login to your Magento Admin
 2. Navigate to Store > Configuration > Sales > Payment Methonds > Spotii > Payment Settings
-3. Click `Register for Spotii`
+3. Click `Register for Spotii` or `I’ve already setup Spotii, I want to edit my settings`
+4. 
 
 ### 2b. Payment Setup
 1. Set the Payment Mode to `Live` for LIVE and set it as `Sandbox` for SANDBOX.
-2. Set the Merchant ID, Public Key and Private Key.
+2. Set the Merchant ID, Public Key and Private Key. The information can be found from your <a href='https://dashboard.spotii.me/settings/integrations' target='_blank'>merchant dashboard</a>.
 3. Set `Payment Action` as `Authorize only` for doing payment authorization only and `Authorize and Capture` for doing authorization as well as payment capture.
 4. Set the Merchant Country as per the origin.
 5. Enable the log tracker to trace the Spotii checkout process.
